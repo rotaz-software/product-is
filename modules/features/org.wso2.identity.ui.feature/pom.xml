@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>org.wso2.is</groupId>
 		<artifactId>identity-features</artifactId>
-		<version>7.2.1-SNAPSHOT</version>
+		<version>7.2.2</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -35,6 +35,12 @@
         <dependency>
             <groupId>org.wso2.identity</groupId>
             <artifactId>org.wso2.stratos.identity.dashboard.ui</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.wso2.org.ops4j.pax.logging</groupId>
+                    <artifactId>pax-logging-log4j2</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

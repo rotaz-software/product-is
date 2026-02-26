@@ -31,7 +31,7 @@
     <artifactId>identity-server-parent</artifactId>
     <packaging>pom</packaging>
     <description>WSO2 Identity Server</description>
-    <version>7.2.1-SNAPSHOT</version>
+    <version>7.2.2</version>
     <name>WSO2 Identity Server</name>
     <url>http://wso2.org/projects/identity</url>
 
@@ -976,6 +976,12 @@
                 <groupId>org.wso2.is</groupId>
                 <artifactId>org.wso2.identity.styles</artifactId>
                 <version>${project.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.wso2.org.ops4j.pax.logging</groupId>
+                        <artifactId>pax-logging-log4j2</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
@@ -2956,6 +2962,8 @@
         <jakarta.mail.version>2.0.1</jakarta.mail.version>
         <jsoup.version>1.15.3</jsoup.version>
         <nimbus-jose-jwt.version>9.41.2</nimbus-jose-jwt.version>
+        <jersey.version>3.1.10</jersey.version>
+        <jetty.version>12.0.12</jetty.version>
     </properties>
 
     <repositories>
@@ -3001,9 +3009,9 @@
     </repositories>
 
     <scm>
-        <url>https://github.com/wso2/product-is.git</url>
-        <developerConnection>scm:git:https://github.com/wso2/product-is.git</developerConnection>
-        <connection>scm:git:https://github.com/wso2/product-is.git</connection>
+        <url>https://github.com/rotaz-software/product-is.git</url>
+        <developerConnection>scm:git:https://github.com/rotaz-software/product-is.git</developerConnection>
+        <connection>scm:git:https://github.com/rotaz-software/product-is.git</connection>
         <tag>HEAD</tag>
     </scm>
 
